@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width; initial-scale=1">
 
     <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/fonts.css"/>
 
     <!--[if IE]> <script src="js/html5.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/js.js"></script>
 
     <title>Fonbet</title>
@@ -60,8 +61,35 @@
                 </table>
                 <div class="sub"></div>
             </nav>
+            <div class="news">
+                <div class="item">Новая версия мобильного приложения для IPhone <time>27.08.2013</time></div>
+            </div>
             <div class="info_blocks">
+
+                <span class="item">
+                    <span class="head">
+                        <img src="images/ico1.png" alt=""/> <span><a href="#">00423452</a></span>
+                    </span>
+                    <span class="text">На счету: <span>35 000 р.</span></span>
+                </span>
+
                 <a href="#">
+                    <span class="item">
+                        <span class="head">
+                            <img src="images/ico2.png" alt=""/> <span>Платежи</span>
+                        </span>
+                        <span class="text">кол-во систем: <span>54</span></span>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="item">
+                        <span class="head">
+                            <img src="images/ico5.png" alt=""/> <span>Запросы</span>
+                        </span>
+                        <span class="text">непрочитанные: <span>12</span></span>
+                    </span>
+                </a>
+                <!-- <a href="#">
                     <span class="item">
                         <span class="head">
                             <img src="images/ico1.png" alt=""/> <span>Регистрация</span>
@@ -84,8 +112,24 @@
                         </span>
                         <span class="text">54 доступных системы</span>
                     </span>
-                </a>
+                </a> -->
             </div>
+            <div class="qiwi">
+                <div class="link"><a href="#"><img src="images/qiwi.png" alt=""/>Пополнить<div class="arrow"></div></a></div>
+                <div class="qiwi_inner">
+                    <form action="#">
+                        <select class="phone_numbers">
+                            <option value="0">+7(926)324-21-45</option>
+                            <option value="1">+7(903)320-20-40</option>
+                            <option value="2">+7(906)325-01-05</option>
+                        </select>
+                        <input type="text" class="sum" value="Сумма"/>
+                        <div class="clear"></div>
+                        <input type="submit" value="Пополнить"/>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </div>
 
