@@ -29,6 +29,30 @@ $(function(){
         $( ".phone_numbers" ).toggle();
     });
 
+    // подключение слайдеров
+    window.mySwipe1 = $("#sl-type-1").Swipe().data('Swipe');
+    window.mySwipe2 = $("#sl-type-2").Swipe().data('Swipe');
+
+    // показ результатов матчей и т.п. в Live
+    $('.sport_results_icons .item a').click(function(){
+        var id = $(this).attr('id');
+
+        if ($(this).parents('.item').hasClass('active')) {
+            $(this).parents('.item').removeClass('active');
+            $('.sport_info .item').slideUp(200);
+        } else {
+            $('.sport_results_icons .item').removeClass('active');
+            $(this).parents('.item').addClass('active');
+
+            $('.sport_info .item').slideUp(200);
+            $('#'+id+'-info').slideDown(250);
+        }
+
+
+
+        return false;
+    });
+
 });
 
 // установка ширины для инфоблоков

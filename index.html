@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1, maximum-scale=1.0">
 
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/jquery-ui.css"/>
@@ -11,6 +11,7 @@
     <!--[if IE]> <script src="js/html5.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src='js/swipe.js'></script>
     <script src="js/js.js"></script>
 
     <title>Fonbet</title>
@@ -129,7 +130,142 @@
                     </form>
                 </div>
             </div>
+            <div class="block">
+                <div class="head">ставка дня</div>
+                <div class="slider type-1">
 
+                    <div id="sl-type-1" class="swipe">
+                        <div class='swipe-wrap'>
+                            <div class="slider_item">
+                                <div class="info">
+                                    <div class="teams">
+                                        <div class="ico football"></div>
+                                        <span>ЦСКА - Ростов</span>
+                                    </div>
+                                    <div class="time">
+                                        <div class="ico time"></div>
+                                        <span>13.09 в 18:44</span>
+                                    </div>
+                                    <div class="text">В субботу, 14 сентября, в рамках восьмого тура чемпионата страны сразятся текущий и недавний лидеры российской футбольной</div>
+                                </div>
+                                <table class="rates">
+                                    <tr>
+                                        <td class="item">Цска <span>1.20</span></td>
+                                        <td class="item">Ничья <span>2.20</span></td>
+                                        <td class="item">Ростов <span>1.30</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="slider_item">
+                                <div class="info">
+                                    <div class="teams">
+                                        <div class="ico football"></div>
+                                        <span>ЦСКА - Ростов</span>
+                                    </div>
+                                    <div class="time">
+                                        <div class="ico time"></div>
+                                        <span>13.09 в 18:44</span>
+                                    </div>
+                                    <div class="text">В субботу, 14 сентября, в рамках восьмого тура чемпионата страны сразятся текущий и недавний лидеры российской футбольной</div>
+                                </div>
+                                <table class="rates">
+                                    <tr>
+                                        <td class="item">Цска <span>1.20</span></td>
+                                        <td class="item">Ничья <span>2.20</span></td>
+                                        <td class="item">Ростов <span>1.30</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev" onclick="mySwipe1.prev(); return false;"></a>
+                    <a href="#" class="next" onclick="mySwipe1.next(); return false;"></a>
+                </div>
+            </div>
+            <div class="block">
+                <div class="head">live</div>
+                <div class="slider type-2">
+
+                    <div id="sl-type-2" class="swipe">
+                        <div class='swipe-wrap'>
+                            <div class="slider_item">
+                                <table class="sport_results_icons">
+                                    <tr>
+                                        <td class="item"><a href="#" id="sport-cat-1"><img src="images/ico-foot-big.png" alt=""/><span>Футбол</span></a></td>
+                                        <td class="item"><a href="#" id="sport-cat-2"><img src="images/ico-basket-big.png" alt=""/><span>Баскебол</span></a></td>
+                                        <td class="item"><a href="#" id="sport-cat-3"><img src="images/ico-tennis-big.png" alt=""/><span>Теннис</span></a></td>
+                                        <td class="item"><a href="#" id="sport-cat-4"><img src="images/ico-hockey-big.png" alt=""/><span>Хоккей</span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="slider_item">
+                                <table class="sport_results_icons">
+                                    <tr>
+                                        <td class="item"><a href="#"><img src="images/ico-foot-big.png" alt=""/><span>Футбол</span></a></td>
+                                        <td class="item"><a href="#"><img src="images/ico-basket-big.png" alt=""/><span>Баскебол</span></a></td>
+                                        <td class="item"><a href="#"><img src="images/ico-tennis-big.png" alt=""/><span>Теннис</span></a></td>
+                                        <td class="item"><a href="#"><img src="images/ico-hockey-big.png" alt=""/><span>Хоккей</span></a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="prev" onclick="mySwipe2.prev(); return false;"></a>
+                    <a href="#" class="next" onclick="mySwipe2.next(); return false;"></a>
+                </div>
+                <div class="sport_info">
+                    <div id="sport-cat-1-info" class="item">
+                        <table>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">ЦСКА - Ростов</div>
+                                    <div class="time">45:00</div>
+                                </td>
+                                <td class="score">0:0</td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">Спартак Москва - Крылья Советов</div>
+                                    <div class="time">05:00</div>
+                                </td>
+                                <td class="score">1:0</td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">Манчестер Юнайтед - Барселона</div>
+                                    <div class="time">45:00</div>
+                                </td>
+                                <td class="score">3:2</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="sport-cat-2-info" class="item">
+                        <table>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">Манчестер Юнайтед - Барселона</div>
+                                    <div class="time">45:00</div>
+                                </td>
+                                <td class="score">3:2</td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">Спартак Москва - Крылья Советов</div>
+                                    <div class="time">05:00</div>
+                                </td>
+                                <td class="score">1:0</td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <div class="teams">ЦСКА - Ростов</div>
+                                    <div class="time">45:00</div>
+                                </td>
+                                <td class="score">0:0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

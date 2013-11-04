@@ -248,6 +248,7 @@ nav.top_nav {
   }
 }
 
+// полполнение счёта киви
 .qiwi {
   margin-bottom: 15px;
   .link {
@@ -307,6 +308,7 @@ nav.top_nav {
   }
 }
 
+// текстовые поля
 input[type="text"] {
   height: 30px;
   line-height: 30px;
@@ -319,6 +321,7 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
+// функциональные кнопки
 .btn,
 input[type="button"],
 input[type="reset"],
@@ -334,4 +337,197 @@ input[type="submit"] {
   font-size: 10px;
   text-transform: uppercase;
   padding: 0 17px;
+}
+
+// основной инфоблок
+.block {
+  .rounded(5px);
+  .drop-shadow(0, 1px, 4px, 0.3);
+  margin-bottom: 15px;
+  background: #fff;
+  .head {
+    .gradient(#e1ecf3, #d5e5ee, #ecf3f8);
+    .bordered(#fafcfd, none, #c7d9e5, none);
+    .border-radius(5px, 0, 0, 5px);
+    padding: 0 12px;
+    font-size: 12px;
+    color: #00233e;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+  }
+}
+
+// слайдер
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.slider {
+  position: relative;
+  .slider_item {
+    font-size: 0;
+    .info {
+      padding: 10px 26px 20px;
+      .teams, .time {
+        font-size: 13px;
+        display: inline-block;
+      }
+      .teams {
+        margin-right: 17px;
+        color: #000;
+      }
+      .time {
+        color: #777;
+      }
+      .text {
+        color: #666;
+        font-size: 11px;
+        padding-top: 10px;
+      }
+    }
+    .rates {
+      width: 100%;
+      border-collapse: separate;
+      .item {
+        color: 999;
+        font-size: 13px;
+        text-align: center;
+        background: #f1f1f1;
+        .bordered(#dadada, #fff, none, #dadada);
+        padding: 10px 0;
+        &:first-child {
+          border-left: 0;
+          .border-radius(0, 0, 5px, 0);
+        }
+        &:last-child {
+          border-right: 0;
+          .border-radius(0, 5px, 0, 0);
+        }
+        span {
+          color: #000;
+          font-size: 20px;
+          display: block;
+        }
+      }
+    }
+    .sport_results_icons {
+      width: 95%;
+      .item {
+        text-align: center;
+        color: #000;
+        &.active a span {
+          color: #a9a9a9;
+        }
+        a {
+          text-decoration: none;
+          span {
+            display: block;
+            font-size: 11px;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+  .prev, .next {
+    display: block;
+    width: 18px;
+    height: 36px;
+    background: url("../images/slider_buttons.png") no-repeat;
+    position: absolute;
+  }
+  &.type-1 .prev,
+  &.type-1 .next {
+    top: 20px;
+  }
+  &.type-2 {
+    .slider_item {
+      .sport_results_icons {
+        margin: 18px 10px;
+      }
+    }
+    .prev, .next {
+      top: 23px;
+    }
+  }
+  .prev {
+    background-position: left center;
+    left: 0;
+  }
+  .next {
+    background-position: right center;
+    right: 0;
+  }
+}
+.sport_info {
+  .item {
+    display: none;
+    table {
+      width: 100%;
+      tr {
+        td {
+          background: #f1f1f1;
+          border-top: 1px solid #dadada;
+          padding: 11px 17px;
+          vertical-align: middle;
+        }
+        &:last-child {
+          .text {
+            .border-radius(0, 0, 5px, 0);
+          }
+          .score {
+            .border-radius(0, 5px, 0, 0);
+          }
+        }
+        .text {
+          font-size: 13px;
+          .teams {
+            color: #000;
+            margin-bottom: 3px;
+          }
+          .time {
+            color: #999;
+          }
+        }
+        .score {
+          color: #000;
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+          width: 60px;
+        }
+
+
+      }
+    }
+  }
+}
+
+// иконки
+.ico {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  &.football {
+    background: url("../images/ico-foot.png") center center no-repeat;
+  }
+  &.time {
+    background: url("../images/ico-time.png") center center no-repeat;
+  }
+  &.basketball {
+    background: url("../images/ico-basket.png") center center no-repeat;
+  }
 }
