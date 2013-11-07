@@ -12,6 +12,12 @@ $(function(){
         setWidthToInfoblocks();
     });
 
+    // установка высоты сайта
+    if ($('.site').height() < $(window).height()) {
+
+        $('.site').height($(window).height());
+    }
+
     // открытие левого меню
     $('.side_menu_link').click(function(){
         $('body').toggleClass('active');
@@ -32,6 +38,7 @@ $(function(){
     // подключение слайдеров
     window.mySwipe1 = $("#sl-type-1").Swipe().data('Swipe');
     window.mySwipe2 = $("#sl-type-2").Swipe().data('Swipe');
+    window.mySwipe3 = $("#sl-type-3").Swipe().data('Swipe');
 
     // показ результатов матчей и т.п. в Live
     $('.sport_results_icons .item a').click(function(){

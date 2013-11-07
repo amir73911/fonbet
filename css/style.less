@@ -178,11 +178,10 @@ nav.top_nav {
     .border-radius(0, 1px, 1px, 0);
     width: 98%;
     background: #c6c6c6;
-
   }
 }
 
-.news {
+.news_popups {
   .drop-shadow(0, 1px, 4px, 0.3);
   margin-bottom: 15px;
   .item {
@@ -319,6 +318,9 @@ input[type="text"] {
   color: #333;
   padding: 0 .3em;
   margin-bottom: 10px;
+  &.wide {
+    width: 100%;
+  }
 }
 
 // функциональные кнопки
@@ -337,6 +339,24 @@ input[type="submit"] {
   font-size: 10px;
   text-transform: uppercase;
   padding: 0 17px;
+  display: inline-block;
+  text-decoration: none;
+  &.wide {
+    display: block;
+  }
+  &.normal-text {
+    text-transform: none;
+    line-height: 28px;
+  }
+  &.btn-shadow {
+    .drop-shadow(0, 1px, 4px, 0.3);
+    margin-bottom: 15px;
+  }
+  &.btn-light {
+    .gradient(#c6e1f5, #baddf8, #cfe4f2);
+    color: #000;
+    border: 1px solid #25567c;
+  }
 }
 
 // основной инфоблок
@@ -448,9 +468,10 @@ input[type="submit"] {
     background: url("../images/slider_buttons.png") no-repeat;
     position: absolute;
   }
-  &.type-1 .prev,
-  &.type-1 .next {
-    top: 20px;
+  &.type-1 {
+    .prev, .next {
+      top: 20px;
+    }
   }
   &.type-2 {
     .slider_item {
@@ -460,6 +481,14 @@ input[type="submit"] {
     }
     .prev, .next {
       top: 23px;
+    }
+  }
+  &.type-3 {
+    .prev, .next {
+      top: 14px;
+    }
+    .info {
+      padding: 25px 26px;
     }
   }
   .prev {
@@ -529,5 +558,79 @@ input[type="submit"] {
   }
   &.basketball {
     background: url("../images/ico-basket.png") center center no-repeat;
+  }
+}
+
+// блок классических новостей
+.news_classic {
+  .item {
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 13px;
+    a {
+      padding: 15px 14px;
+      text-decoration: none;
+      color: #2a5e84;
+      display: block;
+    }
+    time {
+      color: #000;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// блок с контактами
+.contacts {
+  .item {
+    padding: 15px 14px;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 13px;
+    color: #696969;
+    span {
+      color: #000;
+      &.big {
+        font-size: 26px;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.notice_text {
+  color: #fff;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+// форма логина
+.login_form {
+  background: #f0f0f0;
+  padding: 13px;
+  .border-radius(0, 5px, 5px, 0);
+  position: relative;
+  .sub {
+    position: absolute;
+    z-index: 5;
+    bottom: -1px;
+    height: 1px;
+    .border-radius(0, 1px, 1px, 0);
+    width: 96%;
+    background: #c6c6c6;
+  }
+  .btn {
+    padding: 0 40px;
+    float: left;
+  }
+  .pass_remind {
+    float: right;
+    display: block;
+    margin-top: 9px;
+    font-size: 12px;
+    color: #315e81;
   }
 }
