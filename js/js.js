@@ -6,22 +6,32 @@ $(function(){
         return false;
     });
 
-    // установка ширины для инфоблоков
+    // установка ширины для инфоблоков и таблицы Live
     setWidthToInfoblocks();
+    $('.sport_results_icons').width($('.slider.type-2').width());
     $(window).resize(function(){
         setWidthToInfoblocks();
+        $('.sport_results_icons').width($('.slider.type-2').width());
     });
 
     // установка высоты сайта
     if ($('.site').height() < $(window).height()) {
-
         $('.site').height($(window).height());
     }
 
+    // закрытие всплывающих новостей
+    $('.news_popups .item .close').click(function(){
+        $(this).parent('.item').hide();
+        return false;
+    });
+
     // открытие левого меню
     $('.side_menu_link').click(function(){
-        $('body').toggleClass('active');
+        $('body').addClass('active');
         return false;
+    });
+    $('.close_side').click(function(){
+        $('body').removeClass('active');
     });
 
     // раскрытие блока киви

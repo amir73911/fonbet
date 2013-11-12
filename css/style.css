@@ -31,6 +31,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4cb63', endColorstr='#70a72b', GradientType=0);
   height: 35px;
   width: 100%;
+  min-width: 255px;
   position: relative;
 }
 .download_app a {
@@ -107,6 +108,19 @@ body {
 .active .site {
   margin-right: -85%;
 }
+.active .close_side {
+  display: block;
+}
+.close_side {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  cursor: pointer;
+}
 .site {
   float: right;
   margin-left: 0;
@@ -116,6 +130,7 @@ body {
 }
 .wrapper {
   padding: 15px 10px;
+  min-width: 255px;
 }
 header {
   background: #2c6693;
@@ -238,12 +253,12 @@ nav.top_nav .sub {
   background: #c6c6c6;
 }
 .news_popups {
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 15px;
 }
 .news_popups .item {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -254,14 +269,26 @@ nav.top_nav .sub {
   background: -o-linear-gradient(#dfecf6, #baddf8);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfecf6', endColorstr='#baddf8', GradientType=0);
   border: 1px solid #25567c;
-  padding: 17px 11px;
+  padding: 8px 29px 8px 11px;
   font-size: 13px;
+  line-height: 18px;
   color: #eb4040;
   margin-top: 10px;
+  position: relative;
 }
 .news_popups .item time {
   color: #000;
   margin-left: 10px;
+}
+.news_popups .item .close {
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -4px;
+  right: 10px;
+}
+.news_popups .item .close * {
+  display: block;
 }
 .info_blocks {
   font-size: 0;
@@ -293,7 +320,7 @@ nav.top_nav .sub {
 }
 .info_blocks .item .head span {
   font-size: 12px;
-  margin-left: 1px;
+  margin-left: 5px;
 }
 .info_blocks .item .head span a {
   color: #073b64;
@@ -346,6 +373,8 @@ nav.top_nav .sub {
 .qiwi .link a img {
   vertical-align: middle;
   margin-right: 5px;
+  margin-bottom: 2px;
+  height: 10px;
 }
 .qiwi .link a .arrow {
   background: url("../images/arrow_down.png") center center no-repeat;
@@ -440,7 +469,7 @@ input[type="submit"] {
   background: -o-linear-gradient(#5986a9, #275477);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5986a9', endColorstr='#275477', GradientType=0);
   cursor: pointer;
-  height: 30px;
+  min-height: 30px;
   line-height: 30px;
   color: #fff;
   font-size: 10px;
@@ -460,6 +489,7 @@ input[type="button"].normal-text,
 input[type="reset"].normal-text,
 input[type="submit"].normal-text {
   text-transform: none;
+  font-size: 13px;
   line-height: 28px;
 }
 .btn.btn-shadow,
@@ -560,20 +590,27 @@ input[type="submit"].btn-light {
   margin-right: 17px;
   color: #000;
 }
+.slider .slider_item .info .teams > * {
+  vertical-align: middle;
+}
 .slider .slider_item .info .time {
   color: #777;
+}
+.slider .slider_item .info .time > * {
+  vertical-align: middle;
 }
 .slider .slider_item .info .text {
   color: #666;
   font-size: 11px;
   padding-top: 10px;
+  line-height: 17px;
 }
 .slider .slider_item .rates {
   width: 100%;
   border-collapse: separate;
 }
 .slider .slider_item .rates .item {
-  color: 999;
+  color: #999;
   font-size: 13px;
   text-align: center;
   background: #f1f1f1;
@@ -624,9 +661,6 @@ input[type="submit"].btn-light {
   font-size: 20px;
   display: block;
 }
-.slider .slider_item .sport_results_icons {
-  width: 95%;
-}
 .slider .slider_item .sport_results_icons .item {
   text-align: center;
   color: #000;
@@ -654,8 +688,8 @@ input[type="submit"].btn-light {
 .slider.type-1 .next {
   top: 20px;
 }
-.slider.type-2 .slider_item .sport_results_icons {
-  margin: 18px 10px;
+.slider.type-2 {
+  padding: 18px;
 }
 .slider.type-2 .prev,
 .slider.type-2 .next {
@@ -757,9 +791,10 @@ input[type="submit"].btn-light {
 .news_classic .item {
   border-bottom: 1px solid #e7e7e7;
   font-size: 13px;
+  line-height: 18px;
 }
 .news_classic .item a {
-  padding: 15px 14px;
+  padding: 10px 14px;
   text-decoration: none;
   color: #2a5e84;
   display: block;
