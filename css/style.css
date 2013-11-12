@@ -611,6 +611,7 @@ input[type="submit"].btn-light {
 .slider .slider_item .rates .item {
   color: #999;
   font-size: 13px;
+  line-height: 20px;
   text-align: center;
   background: #f1f1f1;
   border-top: solid 1px #dadada;
