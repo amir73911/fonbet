@@ -6,11 +6,13 @@ $(function(){
         return false;
     });
 
-    // установка ширины для инфоблоков и таблицы Live
+    // установка ширины для инфоблоков, плашки под меню и таблицы Live
     setWidthToInfoblocks();
     $('.sport_results_icons').width($('.slider.type-2').width());
+    $('.top_nav .sub').width($('.wrapper').width() - 10);
     $(window).resize(function(){
         setWidthToInfoblocks();
+        $('.top_nav .sub').width($('.wrapper').width() - 10);
         $('.sport_results_icons').width($('.slider.type-2').width());
     });
 
