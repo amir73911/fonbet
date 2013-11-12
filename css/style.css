@@ -283,8 +283,7 @@ nav.top_nav .sub {
 .news_popups .item .close {
   position: absolute;
   display: block;
-  top: 50%;
-  margin-top: -4px;
+  top: 14px;
   right: 10px;
 }
 .news_popups .item .close * {
